@@ -179,6 +179,7 @@
   "contact": {
     "show": true,
     "heading": "Contact",
+    "form_key": "f41ca112-1743-41b4-b0ac-dbeee1d746fe",
     "newsletter": {
       "show": false,
       "label": "Sign up for the newsletter"

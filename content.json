@@ -37,35 +37,64 @@
       "Her book An Artwork a Day: The Arts in Health and Wellbeing brings these strands together in one argument: small daily acts of sensory attention and creative expression are essential to health and wellbeing. That argument now extends into policy and evaluation in the arts sector, and into talks and workshops on everyday creativity, on finding awe and wonder in everyday places."
     ],
     "links": [
-      { "text": "STIR A MEMORY", "url": "https://stiramemory.org" },
-      { "text": "Memories are Stories™", "url": "" }
+      {
+        "text": "STIR A MEMORY",
+        "url": "https://stiramemory.org"
+      },
+      {
+        "text": "Memories are Stories™"
+      }
     ],
     "italics": [
       "An Artwork a Day: The Arts in Health and Wellbeing"
     ],
     "portrait": {
-      "show": false,
-      "image": "",
-      "width": null,
-      "height": null,
-      "alt": "",
-      "caption": ""
+      "show": false
     },
     "cv": {
       "show": false,
-      "label": "Download CV (PDF)",
-      "file": ""
+      "label": "Download CV (PDF)"
     },
     "projects": {
       "show": true,
       "heading": "Projects",
       "items": [
-        { "year": "1991", "title": "UTSAH", "detail": "Ahmedabad", "italic_title": false, "link": "" },
-        { "year": "2008", "title": "Thinkers in the Kitchen", "detail": "Harvard University", "italic_title": false, "link": "" },
-        { "year": "2010", "title": "Stir a Memory", "detail": "community arts project", "italic_title": false, "link": "https://stiramemory.org" },
-        { "year": "2025", "title": "Carnaval de Sueños y Esperanza", "detail": "Boston", "italic_title": false, "link": "" },
-        { "year": "2025", "title": "An Artwork a Day: The Arts in Health and Wellbeing", "detail": "", "italic_title": true, "link": "books.html" },
-        { "year": "2026", "title": "Portraits and Stories", "detail": "", "italic_title": false, "link": "" }
+        {
+          "year": "1991",
+          "title": "UTSAH",
+          "detail": "Ahmedabad",
+          "italic_title": false
+        },
+        {
+          "year": "2008",
+          "title": "Thinkers in the Kitchen",
+          "detail": "Harvard University",
+          "italic_title": false
+        },
+        {
+          "year": "2010",
+          "title": "Stir a Memory",
+          "detail": "community arts project",
+          "italic_title": false,
+          "link": "https://stiramemory.org"
+        },
+        {
+          "year": "2025",
+          "title": "Carnaval de Sueños y Esperanza",
+          "detail": "Boston",
+          "italic_title": false
+        },
+        {
+          "year": "2025",
+          "title": "An Artwork a Day: The Arts in Health and Wellbeing",
+          "italic_title": true,
+          "link": "books.html"
+        },
+        {
+          "year": "2026",
+          "title": "Portraits and Stories",
+          "italic_title": false
+        }
       ]
     }
   },
@@ -137,7 +166,6 @@
         "title": "Manhattan",
         "year": "ongoing",
         "medium": "Multimedia",
-        "size": "",
         "image": "/images/manhattan.webp",
         "image_small": "/images/manhattan-800.webp",
         "width": 1153,
@@ -173,43 +201,39 @@
         "title": "An Artwork a Day",
         "subtitle": "The Arts in Health and Wellbeing",
         "description": "Small daily acts of sensory attention and creative expression are essential to health and wellbeing.",
-        "cover": "",
-        "cover_width": null,
-        "cover_height": null,
+        "cover": "/images/an-artwork-a-day-cover-1.png",
         "cover_alt": "Cover of An Artwork a Day",
         "links": [
-          { "label": "Buy on Amazon", "url": "https://www.amazon.com/dp/B0FSYQG7ZJ" }
-        ],
-        "india_links": []
+          {
+            "label": "Buy on Amazon",
+            "url": "https://www.amazon.com/dp/B0FSYQG7ZJ"
+          }
+        ]
       },
       {
         "title": "Memories are Stories",
-        "subtitle": "",
         "description": "A journal.",
-        "cover": "",
-        "cover_width": null,
-        "cover_height": null,
+        "cover": "/images/memories-are-stories-cover-1.png",
         "cover_alt": "Cover of the Memories are Stories journal",
         "links": [
-          { "label": "Buy on Amazon", "url": "https://www.amazon.com/dp/B0FT2MY9W1" }
-        ],
-        "india_links": []
+          {
+            "label": "Buy on Amazon",
+            "url": "https://www.amazon.com/dp/B0FT2MY9W1"
+          }
+        ]
       }
     ],
     "events": {
       "show": false,
-      "heading": "Upcoming events",
-      "items": []
+      "heading": "Upcoming events"
     },
     "panels": {
       "show": false,
-      "heading": "Panels and conversations",
-      "items": []
+      "heading": "Panels and conversations"
     },
     "press": {
       "show": false,
-      "heading": "Press",
-      "items": []
+      "heading": "Press"
     }
   },
   "contact": {
@@ -219,12 +243,10 @@
       "show": true,
       "text": "Krina gives talks and workshops on everyday creativity, on finding awe and wonder in everyday places."
     },
-    "form_key": "",
+    "form_key": "f41ca112-1743-41b4-b0ac-dbeee1d746fe",
     "newsletter": {
       "show": false,
-      "text": "",
-      "label": "Sign up for the newsletter",
-      "url": ""
+      "label": "Sign up for the newsletter"
     }
   }
 }

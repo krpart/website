@@ -1,0 +1,649 @@
+/* Krina Patel — site styles.
+   Sizes, colours and spacing follow the build brief as revised by Danny on Oct 10.
+   Change a design decision in the tokens, not further down. */
+
+/* ---------- Fonts (self-hosted, open licence: see fonts/*-OFL.txt) ---------- */
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("fonts/newsreader-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Newsreader";
+  font-style: normal;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("fonts/newsreader-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("fonts/newsreader-latin-wght-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 200 800;
+  font-display: swap;
+  src: url("fonts/newsreader-latin-ext-wght-italic.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/inter-latin-wght-normal.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/inter-latin-ext-wght-normal.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/inter-latin-wght-italic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/inter-latin-ext-wght-italic.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* ---------- Design tokens ---------- */
+/* Layout: separate pages under one sticky header. Text column 680px, pictures up to 1000px.
+   Light mode only, on purpose: the artwork always sits on the same cream. */
+:root {
+  color-scheme: light;
+
+  /* Colour */
+  --bg: #FBF8F0;          /* very light cream */
+  --text: #1A1A1A;        /* text and links */
+  --text-2: #4A4A4A;      /* secondary text; never lighter than this */
+  --accent: #A3543A;      /* rust from the fringe of Hearth rug: hover, focus, button hover */
+  --rule: #DDD8CC;        /* hairlines between sections (decoration only, never text) */
+
+  /* Fonts */
+  --font-head: "Newsreader", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+
+  /* Type: mobile values; desktop values are set at 1024px below */
+  --fs-body: 1.125rem;      /* 18px */
+  --fs-caption: 0.9375rem;  /* 15px, the floor for any text */
+  --fs-nav: 1.0625rem;      /* 17px */
+  --fs-button: 1.0625rem;   /* 17px */
+  --fs-name: 1.625rem;      /* 26px, name in the header */
+  --fs-title: 1.875rem;     /* 30px, page titles */
+  --fs-h2: 1.625rem;        /* 26px, headings inside a page */
+  --fs-statement: 1.375rem; /* 22px, statement, book titles, essay title */
+  --lh-body: 1.6;
+  --lh-head: 1.2;
+  --lh-statement: 1.45;
+
+  /* Spacing and layout: mobile (<600px) */
+  --side: 24px;
+  --text-max: 680px;
+  --statement-max: 600px;
+  --img-max: 100%;
+  --page-top: 40px;         /* header to page title */
+  --section-gap: 64px;
+  --gallery-gap: 24px;
+  --tap: 48px;
+  --tap-gap: 8px;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --side: 48px;
+    --page-top: 56px;
+    --section-gap: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --fs-body: 1.1875rem;     /* 19px */
+    --fs-caption: 1rem;       /* 16px */
+    --fs-name: 2.125rem;      /* 34px */
+    --fs-title: 2.75rem;      /* 44px */
+    --fs-h2: 2.125rem;        /* 34px */
+    --fs-statement: 1.625rem; /* 26px */
+    --side: 64px;
+    --img-max: 1000px;
+    --page-top: 72px;
+    --section-gap: 112px;
+  }
+}
+
+/* ---------- Base ---------- */
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  font-weight: 400;
+  line-height: var(--lh-body);
+  overflow-wrap: break-word;
+}
+
+h1, h2, h3, p, figure, blockquote, ul, ol { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+img { display: block; max-width: 100%; height: auto; }
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+}
+a:hover {
+  color: var(--accent);
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Fallback content: only visible if the page can't read content.json. */
+.js .fallback { display: none; }
+
+.skip {
+  position: absolute;
+  left: var(--side);
+  top: -100px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  padding-inline: 16px;
+  background: var(--bg);
+  font-size: var(--fs-nav);
+}
+.skip:focus { top: 8px; }
+
+/* ---------- Layout ---------- */
+.wrap {
+  width: min(100% - 2 * var(--side), var(--img-max));
+  margin-inline: auto;
+}
+.measure {
+  max-width: var(--text-max);
+  margin-inline: auto;
+}
+.flow > * + * { margin-top: 1em; }   /* 1em between paragraphs */
+
+/* footer stays at the bottom of the window on short pages */
+#site:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+main {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
+  padding-top: var(--page-top);
+  padding-bottom: var(--section-gap);
+}
+main > * { scroll-margin-top: 96px; }
+
+.page-title {
+  font-family: var(--font-head);
+  font-size: var(--fs-title);
+  font-weight: 400;
+  line-height: var(--lh-head);
+  text-wrap: balance;
+  margin-bottom: 0.75em;
+}
+h2 {
+  font-family: var(--font-head);
+  font-size: var(--fs-h2);
+  font-weight: 400;
+  line-height: var(--lh-head);
+  text-wrap: balance;
+  margin-bottom: 0.8em;
+}
+h3 {
+  font-family: var(--font-head);
+  font-size: var(--fs-statement);
+  font-style: italic;
+  font-weight: 400;
+  line-height: var(--lh-head);
+  text-wrap: balance;
+}
+
+/* A section inside a page starts with a hairline, so the parts of a page read as separate. */
+.ruled {
+  border-top: 1px solid var(--rule);
+  padding-top: calc(var(--section-gap) * 0.6);
+}
+
+.caption {
+  font-size: var(--fs-caption);
+  line-height: 1.5;
+  color: var(--text-2);
+}
+.caption .line { display: block; }
+.caption .title-line { color: var(--text); }
+
+/* ---------- Buttons and standalone links (48px tap targets) ---------- */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  padding: 10px 22px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--text);
+  color: var(--bg);
+  font-family: var(--font-body);
+  font-size: var(--fs-button);
+  font-weight: 500;
+  line-height: 1.25;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+}
+.button:hover { background: var(--accent); color: var(--bg); }
+.button[disabled] { opacity: 0.7; cursor: default; }
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--tap-gap);
+}
+.tap-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+}
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: var(--tap-gap);
+}
+
+/* ---------- Header (sticks to the top while you scroll) ---------- */
+.site-header {
+  position: sticky;
+  /* On narrow screens the menu sits under the name; site.js sets --stick so only the menu row stays. */
+  top: calc(env(safe-area-inset-top, 0px) - var(--stick, 0px));
+  z-index: 20;
+  background: var(--bg);
+}
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--rule);
+  opacity: 0;
+}
+.site-header.is-scrolled::after { opacity: 1; }
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 40px;
+  row-gap: 2px;
+  padding-block: 12px 4px;
+}
+@media (min-width: 600px) { .header-inner { padding-block: 16px; } }
+
+.site-name {
+  font-family: var(--font-head);
+  font-size: var(--fs-name);
+  font-weight: 400;
+  line-height: var(--lh-head);
+  color: var(--text);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+}
+.site-name:hover { color: var(--text); }
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 24px;
+  row-gap: 0;
+}
+@media (max-width: 599px) {
+  .site-nav { width: 100%; }
+  .site-nav ul { justify-content: space-between; column-gap: var(--tap-gap); }
+}
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap);
+  font-size: var(--fs-nav);
+  line-height: 1.2;
+  text-decoration: none;
+}
+.site-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35em;
+}
+.site-nav a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35em;
+}
+
+/* ---------- Home ---------- */
+.page-home { padding-top: 0; }
+.home-intro { display: flex; flex-direction: column; gap: 32px; }
+.home-tagline {
+  font-size: var(--fs-caption);
+  line-height: 1.5;
+  color: var(--text-2);
+}
+.opening figure {
+  /* as large as the screen allows, without running taller than 75% of it */
+  width: min(100%, calc(75vh * var(--r, 0.72)));
+  width: min(100%, calc(75svh * var(--r, 0.72)));
+  margin-inline: auto;
+}
+.opening img { width: 100%; height: auto; }
+.opening figcaption { margin-top: 12px; }
+
+.statement p {
+  max-width: var(--statement-max);
+  margin-inline: auto;
+  font-family: var(--font-head);
+  font-size: var(--fs-statement);
+  font-style: italic;
+  line-height: var(--lh-statement);
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+@media (min-width: 600px) {
+  .feature { grid-template-columns: 180px minmax(0, 1fr); gap: 40px; }
+}
+.feature .book-text { display: flex; flex-direction: column; gap: 16px; }
+
+/* ---------- About ---------- */
+.portrait {
+  width: min(100%, 320px);
+  margin-bottom: 32px;
+}
+.portrait figcaption { margin-top: 8px; }
+.cv { margin-top: 32px; }
+
+.timeline { display: flex; flex-direction: column; gap: 14px; }
+.timeline li {
+  display: grid;
+  grid-template-columns: 3.5em minmax(0, 1fr);
+  column-gap: 20px;
+}
+.timeline .year {
+  color: var(--text-2);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Studio gallery ---------- */
+.section-intro { margin-bottom: 56px; }
+
+.gallery {
+  --cols: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+  grid-auto-flow: row dense;
+  column-gap: var(--gallery-gap);
+  row-gap: 48px;
+  container-type: inline-size;
+}
+.gallery figure { min-width: 0; }
+.gallery figcaption { margin-top: 12px; }
+
+.art-open {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+.art-open picture { display: block; height: 100%; }
+.art-open img { width: 100%; height: auto; }
+
+@media (min-width: 600px) {
+  .gallery { --cols: 2; }
+  .gallery .wide { grid-column: span 2; }
+  /* Every frame in the grid has the same height, so each row lines up.
+     Artwork is contained in its frame, never cropped. */
+  .gallery .art-open {
+    height: calc((100cqw - (var(--cols) - 1) * var(--gallery-gap)) / var(--cols) * 1.4);
+  }
+  .gallery .art-open img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: 50% 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .gallery { --cols: 3; }
+}
+
+/* ---------- Research ---------- */
+.essay-title { margin-bottom: 28px; }
+.note {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid var(--rule);
+  font-size: var(--fs-caption);
+  line-height: 1.5;
+  color: var(--text-2);
+}
+.note blockquote {
+  margin-top: 0.75em;
+  padding-inline-start: 1.5em;
+}
+
+/* ---------- Books ---------- */
+.books {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 56px;
+}
+@media (min-width: 600px) {
+  .books { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+}
+.book { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.cover { width: min(100%, 200px); }
+.feature .cover { width: min(100%, 180px); }
+.cover img { width: 100%; height: auto; }
+.cover-placeholder {
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: 2 / 3;
+  padding: 18px;
+  background: var(--accent);
+  color: var(--bg);
+  font-family: var(--font-head);
+  font-size: var(--fs-statement);
+  font-style: italic;
+  line-height: var(--lh-head);
+}
+.book-title {
+  margin: 0;
+  font-family: var(--font-head);
+  font-size: var(--fs-statement);
+  font-style: italic;
+  font-weight: 400;
+  line-height: var(--lh-head);
+}
+.book-subtitle { margin-top: 4px; font-style: italic; }
+
+/* ---------- Events, panels, press ---------- */
+.list-items { display: flex; flex-direction: column; gap: 28px; }
+.item-meta {
+  font-size: var(--fs-caption);
+  line-height: 1.5;
+  color: var(--text-2);
+}
+.press-quote {
+  font-family: var(--font-head);
+  font-size: var(--fs-statement);
+  font-style: italic;
+  line-height: var(--lh-statement);
+}
+.press-source { margin-top: 8px; }
+
+/* ---------- Contact ---------- */
+.contact-lead { margin-bottom: 32px; }
+.contact-form { display: flex; flex-direction: column; gap: 20px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: var(--fs-body); }
+.field input,
+.field textarea {
+  width: 100%;
+  min-height: var(--tap);
+  padding: 10px 12px;
+  border: 1px solid var(--text-2);
+  border-radius: 3px;
+  background: #FFFFFF;
+  color: var(--text);
+  font: inherit;
+}
+.field textarea { min-height: 180px; resize: vertical; }
+.honeypot { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.form-status:empty { display: none; }
+.social { margin-top: 32px; }
+.newsletter { margin-top: 48px; }
+.newsletter p + .button-row { margin-top: 12px; }
+
+/* ---------- Footer ---------- */
+.site-footer { border-top: 1px solid var(--rule); }
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 24px;
+  row-gap: 4px;
+  padding-block: 20px 40px;
+  font-size: var(--fs-caption);
+  color: var(--text-2);
+}
+
+/* ---------- Full-screen artwork viewer ---------- */
+.viewer {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+.viewer::backdrop { background: var(--bg); }
+.viewer[open] {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+}
+.viewer-top {
+  display: flex;
+  justify-content: flex-end;
+  padding: max(8px, env(safe-area-inset-top, 0px)) 8px 0;
+}
+.viewer-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  padding-inline: var(--side);
+  touch-action: pan-y;
+}
+.viewer-stage img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+.viewer-bottom {
+  display: grid;
+  grid-template-columns: var(--tap) minmax(0, 1fr) var(--tap);
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 900px;
+  margin-inline: auto;
+  padding: 12px 8px max(16px, env(safe-area-inset-bottom, 0px));
+}
+.viewer-bottom .caption { text-align: center; }
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap);
+  height: var(--tap);
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background: none;
+  color: var(--text);
+  cursor: pointer;
+}
+.icon-button:hover { color: var(--accent); }
+.icon-button svg { width: 26px; height: 26px; }
+.viewer-open { overflow: hidden; }
+
+/* ---------- Fallback page ---------- */
+.fallback {
+  width: min(100% - 2 * var(--side), var(--text-max));
+  margin-inline: auto;
+  padding-block: 48px;
+}
+.fallback > * + * { margin-top: 1em; }
+.fallback .site-name { font-size: var(--fs-title); }

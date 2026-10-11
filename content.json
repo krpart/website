@@ -1,0 +1,230 @@
+{
+  "site": {
+    "name": "Krina Patel",
+    "tagline": "Artist and Researcher · Ed.D., Harvard University",
+    "email": "krinapatelart@gmail.com",
+    "instagram": "https://www.instagram.com/krinapatel.art/",
+    "linkedin": "https://www.linkedin.com/in/krinapatelpositively/",
+    "copyright": "© 2026 Krina Patel"
+  },
+  "home": {
+    "opening": {
+      "show": true,
+      "image": "/images/manhattan.webp",
+      "image_small": "/images/manhattan-800.webp",
+      "width": 1153,
+      "height": 1600,
+      "alt": "Three stacked digital collages made from photographs of candy and snack packaging, mirrored and warped into kaleidoscopic patterns in red, pink, blue and yellow, on black.",
+      "title": "Manhattan",
+      "detail": "ongoing"
+    },
+    "statement": {
+      "show": true,
+      "text": "Creativity is an innate human capacity to perceive and shape the world in new ways and as a whole: mind with body, past with present, self with others. Through the arts, which begin with engaging the body and the senses, I practice this capacity and support others in practicing it, because this way of thinking and being is essential to health and wellbeing."
+    },
+    "book": {
+      "show": true,
+      "heading": "New book"
+    }
+  },
+  "about": {
+    "show": true,
+    "heading": "About",
+    "paragraphs": [
+      "Krina Patel has lived this conviction throughout her career. It began in Ahmedabad with UTSAH, a creative arts program designed with the disability community and open to every student. It continued in classrooms in New York City and Boston, where her students explored identity through portraits and stories. In her work in the community and the schools, she saw that engaging the body and the senses enhances learning, and is perhaps essential for some students. Her doctoral research at Harvard, on how artisans think and learn, gave the conviction its evidence: thinking is an embodied process engaging the body, brain and mind.",
+      "In time, the work moved into community life. STIR A MEMORY began with food as a way into memories and stories, and grew into Memories are Stories™, projects that invite people to share their stories and connect with one another. Because connection matters to health, she has collaborated with healthcare providers and community health organizations to design arts programs that address social isolation.",
+      "Throughout, her studio practice has continued, from drawing and printmaking at the Kanoria Centre for Arts in Ahmedabad and the Art Students League in New York to the prints and collage she makes today in traditional and digital media.",
+      "Her book An Artwork a Day: The Arts in Health and Wellbeing brings these strands together in one argument: small daily acts of sensory attention and creative expression are essential to health and wellbeing. That argument now extends into policy and evaluation in the arts sector, and into talks and workshops on everyday creativity, on finding awe and wonder in everyday places."
+    ],
+    "links": [
+      { "text": "STIR A MEMORY", "url": "https://stiramemory.org" },
+      { "text": "Memories are Stories™", "url": "" }
+    ],
+    "italics": [
+      "An Artwork a Day: The Arts in Health and Wellbeing"
+    ],
+    "portrait": {
+      "show": false,
+      "image": "",
+      "width": null,
+      "height": null,
+      "alt": "",
+      "caption": ""
+    },
+    "cv": {
+      "show": false,
+      "label": "Download CV (PDF)",
+      "file": ""
+    },
+    "projects": {
+      "show": true,
+      "heading": "Projects",
+      "items": [
+        { "year": "1991", "title": "UTSAH", "detail": "Ahmedabad", "italic_title": false, "link": "" },
+        { "year": "2008", "title": "Thinkers in the Kitchen", "detail": "Harvard University", "italic_title": false, "link": "" },
+        { "year": "2010", "title": "Stir a Memory", "detail": "community arts project", "italic_title": false, "link": "https://stiramemory.org" },
+        { "year": "2025", "title": "Carnaval de Sueños y Esperanza", "detail": "Boston", "italic_title": false, "link": "" },
+        { "year": "2025", "title": "An Artwork a Day: The Arts in Health and Wellbeing", "detail": "", "italic_title": true, "link": "books.html" },
+        { "year": "2026", "title": "Portraits and Stories", "detail": "", "italic_title": false, "link": "" }
+      ]
+    }
+  },
+  "studio": {
+    "show": true,
+    "heading": "Studio",
+    "paragraphs": [
+      "My practice begins with the line. I try to convey the look and feel of what I am remembering, reflecting on and observing: a visual gestalt, an essence. I expand on that through further work, working both digitally and with physical materials, layering until the work holds more than the line alone.",
+      "These layers and fragments of images are rarely neutral. They are drawn from various sources and made by hand. They come together to express the sense of a time, a place, the people who were there. Layering images is a way of layering memory: each piece I add is a story that connects me back to a self, a place, people.",
+      "Through my work, I am pursuing a question of connection: to self, to the outside world, to people, to place, to objects. I make this work to trace that connection for myself, and to invite viewers to trace their own."
+    ],
+    "artworks": [
+      {
+        "title": "Hearth rug",
+        "year": "2010",
+        "medium": "Dry pastels",
+        "size": "5 × 7 in (10 × 14 in framed)",
+        "image": "/images/hearth-rug-2010.webp",
+        "image_small": "/images/hearth-rug-2010-800.webp",
+        "width": 1600,
+        "height": 1129,
+        "alt": "Dry pastel drawing of a rug in bands of deep blue-black, brown and grey, with a rust-red fringe along the bottom edge, on cream paper."
+      },
+      {
+        "title": "Beyond Words",
+        "year": "2003",
+        "medium": "Etching with chine-collé, edition 9/20",
+        "size": "15 × 12 in",
+        "image": "/images/beyond-words-2003.webp",
+        "image_small": "/images/beyond-words-2003-800.webp",
+        "width": 1164,
+        "height": 1600,
+        "alt": "Black and grey etching of a weathered wall and doorway, overlaid with fragments of printed text such as “cost of living”, on a sheet printed with faint columns of newsprint."
+      },
+      {
+        "title": "Memories Series of Prints",
+        "year": "2003",
+        "medium": "Etching with chine-collé",
+        "size": "24 × 30 in",
+        "image": "/images/memories-series-blue-2003.webp",
+        "image_small": "/images/memories-series-blue-2003-800.webp",
+        "width": 1187,
+        "height": 1600,
+        "alt": "Blue print: a square etching with a mottled deep-blue border around a grey-blue centre with small drawn flowers and stems, on white paper."
+      },
+      {
+        "title": "Memories Series of Prints",
+        "year": "2003",
+        "medium": "Etching with chine-collé",
+        "size": "24 × 30 in",
+        "image": "/images/memories-series-teal-2003.webp",
+        "image_small": "/images/memories-series-teal-2003-800.webp",
+        "width": 1187,
+        "height": 1600,
+        "alt": "Teal print: a square etching with a mottled teal border around a grey centre printed with a dense floral pattern, on white paper."
+      },
+      {
+        "title": "Sunrise at Home",
+        "year": "2009",
+        "medium": "Monotype, water-based oils",
+        "size": "14 × 11 in",
+        "image": "/images/sunrise-at-home-2009.webp",
+        "image_small": "/images/sunrise-at-home-2009-800.webp",
+        "width": 1096,
+        "height": 1600,
+        "alt": "Monotype of stacked bands of yellow, orange, red and pink, with a few small white flowers at the right edge."
+      },
+      {
+        "title": "Manhattan",
+        "year": "ongoing",
+        "medium": "Multimedia",
+        "size": "",
+        "image": "/images/manhattan.webp",
+        "image_small": "/images/manhattan-800.webp",
+        "width": 1153,
+        "height": 1600,
+        "alt": "Three stacked digital collages made from photographs of candy and snack packaging, mirrored and warped into kaleidoscopic patterns in red, pink, blue and yellow, on black."
+      }
+    ]
+  },
+  "research": {
+    "show": true,
+    "heading": "Research",
+    "title": "From the Sky to the Loom",
+    "paragraphs": [
+      "I believe the urge to make is innate. It lives in the vegetable vendor’s pushcart and the henna-patterned palm as much as in the gallery, and it grows with practice. Growing up in India, I was surrounded by this everyday art, made by ordinary people going about their lives.",
+      "Art and craft were once one idea. H. Kumar Vyas, one of the founders of the National Institute of Design, writes, “no separate terms were needed to distinguish the [plastic] arts from the crafts. In the minds of the creators and the people for whom these objects were created, art and craft remain one inseparable concept.” Fine art as a realm of its own, Larry Shiner shows, took shape in Europe in the early nineteenth century, and reached India with the art gallery in the 1930s.",
+      "A line of Indian artists and educators held on to the idea of crafts and arts as one unified concept and built institutions around it: Tagore and Nandalal Bose at Santiniketan, K.G. Subramanyan, Dashrath Patel, and the founders of NID. They understood creativity as a capacity everyone carries, and art, craft and design as one practice.",
+      "From the Sky to the Loom is my research into what that inheritance means today. Kabir, in Tagore’s translation, speaks of the inward and the outward becoming one sky*. I am asking what that one sky looks like now, when a contemporary artist carries craft into the Venice Biennale as a choice, and an artisan works the loom to live.",
+      "I am bringing these two strands together in two ways. I am interviewing contemporary artists about how they hold freedom and labor in their own practice. And I am reading the writings of Tagore, Bose, Subramanyan, Patel and Vyas, to set what artists tell me today alongside what these thinkers set out to build. The research, once again, hews to the idea of the whole that underlies my work."
+    ],
+    "italics": [
+      "From the Sky to the Loom",
+      "Songs of Kabir"
+    ],
+    "note": "* The line comes from poem XVII of Songs of Kabir, translated by Tagore and published by Macmillan in New York in 1915. The full passage reads:",
+    "note_quote": "I have known in my body the sport of the universe: I have escaped from the error of this world. The inward and the outward are become as one sky, the Infinite and the finite are united: I am drunken with the sight of this All!"
+  },
+  "books": {
+    "show": true,
+    "heading": "Books",
+    "show_india_links": false,
+    "items": [
+      {
+        "title": "An Artwork a Day",
+        "subtitle": "The Arts in Health and Wellbeing",
+        "description": "Small daily acts of sensory attention and creative expression are essential to health and wellbeing.",
+        "cover": "",
+        "cover_width": null,
+        "cover_height": null,
+        "cover_alt": "Cover of An Artwork a Day",
+        "links": [
+          { "label": "Buy on Amazon", "url": "https://www.amazon.com/dp/B0FSYQG7ZJ" }
+        ],
+        "india_links": []
+      },
+      {
+        "title": "Memories are Stories",
+        "subtitle": "",
+        "description": "A journal.",
+        "cover": "",
+        "cover_width": null,
+        "cover_height": null,
+        "cover_alt": "Cover of the Memories are Stories journal",
+        "links": [
+          { "label": "Buy on Amazon", "url": "https://www.amazon.com/dp/B0FT2MY9W1" }
+        ],
+        "india_links": []
+      }
+    ],
+    "events": {
+      "show": false,
+      "heading": "Upcoming events",
+      "items": []
+    },
+    "panels": {
+      "show": false,
+      "heading": "Panels and conversations",
+      "items": []
+    },
+    "press": {
+      "show": false,
+      "heading": "Press",
+      "items": []
+    }
+  },
+  "contact": {
+    "show": true,
+    "heading": "Contact",
+    "talks": {
+      "show": true,
+      "text": "Krina gives talks and workshops on everyday creativity, on finding awe and wonder in everyday places."
+    },
+    "form_key": "",
+    "newsletter": {
+      "show": false,
+      "text": "",
+      "label": "Sign up for the newsletter",
+      "url": ""
+    }
+  }
+}

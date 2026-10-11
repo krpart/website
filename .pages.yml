@@ -5,7 +5,7 @@ media:
   - name: images
     label: Images
     input: images
-    output: /images
+    output: images
     categories: [image]
   - name: files
     label: Files (PDFs)

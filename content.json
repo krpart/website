@@ -1,31 +1,9 @@
 {
-  "site": {
-    "name": "Krina Patel",
-    "tagline": "Artist and Researcher · Ed.D., Harvard University",
-    "email": "krinapatelart@gmail.com",
-    "instagram": "https://www.instagram.com/krinapatel.art/",
-    "linkedin": "https://www.linkedin.com/in/krinapatelpositively/",
-    "copyright": "© 2026 Krina Patel"
+  "opening": {
+    "show": false
   },
-  "home": {
-    "opening": {
-      "show": true,
-      "image": "/images/manhattan.webp",
-      "image_small": "/images/manhattan-800.webp",
-      "width": 1153,
-      "height": 1600,
-      "alt": "Three stacked digital collages made from photographs of candy and snack packaging, mirrored and warped into kaleidoscopic patterns in red, pink, blue and yellow, on black.",
-      "title": "Manhattan",
-      "detail": "ongoing"
-    },
-    "statement": {
-      "show": true,
-      "text": "Creativity is an innate human capacity to perceive and shape the world in new ways and as a whole: mind with body, past with present, self with others. Through the arts, which begin with engaging the body and the senses, I practice this capacity and support others in practicing it, because this way of thinking and being is essential to health and wellbeing."
-    },
-    "book": {
-      "show": true,
-      "heading": "New book"
-    }
+  "statement": {
+    "show": false
   },
   "about": {
     "show": true,
@@ -37,36 +15,23 @@
       "Her book An Artwork a Day: The Arts in Health and Wellbeing brings these strands together in one argument: small daily acts of sensory attention and creative expression are essential to health and wellbeing. That argument now extends into policy and evaluation in the arts sector, and into talks and workshops on everyday creativity, on finding awe and wonder in everyday places."
     ],
     "links": [
-      { "text": "STIR A MEMORY", "url": "https://stiramemory.org" },
-      { "text": "Memories are Stories™", "url": "" }
+      {
+        "text": "STIR A MEMORY",
+        "url": "https://stiramemory.org"
+      },
+      {
+        "text": "Memories are Stories™"
+      }
     ],
     "italics": [
       "An Artwork a Day: The Arts in Health and Wellbeing"
     ],
     "portrait": {
-      "show": false,
-      "image": "",
-      "width": null,
-      "height": null,
-      "alt": "",
-      "caption": ""
+      "show": false
     },
     "cv": {
       "show": false,
-      "label": "Download CV (PDF)",
-      "file": ""
-    },
-    "projects": {
-      "show": true,
-      "heading": "Projects",
-      "items": [
-        { "year": "1991", "title": "UTSAH", "detail": "Ahmedabad", "italic_title": false, "link": "" },
-        { "year": "2008", "title": "Thinkers in the Kitchen", "detail": "Harvard University", "italic_title": false, "link": "" },
-        { "year": "2010", "title": "Stir a Memory", "detail": "community arts project", "italic_title": false, "link": "https://stiramemory.org" },
-        { "year": "2025", "title": "Carnaval de Sueños y Esperanza", "detail": "Boston", "italic_title": false, "link": "" },
-        { "year": "2025", "title": "An Artwork a Day: The Arts in Health and Wellbeing", "detail": "", "italic_title": true, "link": "books.html" },
-        { "year": "2026", "title": "Portraits and Stories", "detail": "", "italic_title": false, "link": "" }
-      ]
+      "label": "Download CV (PDF)"
     }
   },
   "studio": {
@@ -137,7 +102,6 @@
         "title": "Manhattan",
         "year": "ongoing",
         "medium": "Multimedia",
-        "size": "",
         "image": "/images/manhattan.webp",
         "image_small": "/images/manhattan-800.webp",
         "width": 1153,
@@ -164,6 +128,9 @@
     "note": "* The line comes from poem XVII of Songs of Kabir, translated by Tagore and published by Macmillan in New York in 1915. The full passage reads:",
     "note_quote": "I have known in my body the sport of the universe: I have escaped from the error of this world. The inward and the outward are become as one sky, the Infinite and the finite are united: I am drunken with the sight of this All!"
   },
+  "projects": {
+    "show": false
+  },
   "books": {
     "show": true,
     "heading": "Books",
@@ -173,58 +140,48 @@
         "title": "An Artwork a Day",
         "subtitle": "The Arts in Health and Wellbeing",
         "description": "Small daily acts of sensory attention and creative expression are essential to health and wellbeing.",
-        "cover": "",
-        "cover_width": null,
-        "cover_height": null,
+        "cover": "/images/Screenshot 2026-10-11 at 4.07.31 PM.png",
         "cover_alt": "Cover of An Artwork a Day",
         "links": [
-          { "label": "Buy on Amazon", "url": "https://www.amazon.com/dp/B0FSYQG7ZJ" }
-        ],
-        "india_links": []
+          {
+            "label": "Buy on Amazon",
+            "url": "https://www.amazon.com/dp/B0FSYQG7ZJ"
+          },
+          {}
+        ]
       },
       {
         "title": "Memories are Stories",
-        "subtitle": "",
         "description": "A journal.",
-        "cover": "",
-        "cover_width": null,
-        "cover_height": null,
+        "cover": "/images/Screenshot 2026-10-11 at 4.08.04 PM.png",
         "cover_alt": "Cover of the Memories are Stories journal",
         "links": [
-          { "label": "Buy on Amazon", "url": "https://www.amazon.com/dp/B0FT2MY9W1" }
-        ],
-        "india_links": []
+          {
+            "label": "Buy on Amazon",
+            "url": "https://www.amazon.com/dp/B0FT2MY9W1"
+          }
+        ]
       }
-    ],
-    "events": {
-      "show": false,
-      "heading": "Upcoming events",
-      "items": []
-    },
-    "panels": {
-      "show": false,
-      "heading": "Panels and conversations",
-      "items": []
-    },
-    "press": {
-      "show": false,
-      "heading": "Press",
-      "items": []
-    }
+    ]
+  },
+  "events": {
+    "show": false
+  },
+  "panels": {
+    "show": false
+  },
+  "press": {
+    "show": false
+  },
+  "talks": {
+    "show": false
   },
   "contact": {
     "show": true,
     "heading": "Contact",
-    "talks": {
-      "show": true,
-      "text": "Krina gives talks and workshops on everyday creativity, on finding awe and wonder in everyday places."
-    },
-    "form_key": "",
     "newsletter": {
       "show": false,
-      "text": "",
-      "label": "Sign up for the newsletter",
-      "url": ""
+      "label": "Sign up for the newsletter"
     }
   }
 }

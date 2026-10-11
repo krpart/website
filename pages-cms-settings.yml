@@ -1,0 +1,582 @@
+# Pages CMS settings: this file decides the form Krina sees at app.pagescms.org.
+# One group per page, in menu order. Every key in content.json has a field here:
+# Pages CMS only writes back the fields listed in this file, so a key that is
+# missing here would be deleted from content.json the first time she saves.
+
+media:
+  - name: images
+    label: Images
+    input: images
+    output: images
+
+settings:
+  content:
+    # Belt and braces: anything in content.json that this form doesn't show
+    # is kept as it is when she saves, instead of being deleted.
+    merge: true
+
+content:
+  - name: website
+    label: Website
+    type: file
+    path: content.json
+    format: json
+    fields:
+
+      # ---------- Shared by every page ----------
+      - name: site
+        label: Name, email and links (every page)
+        type: object
+        fields:
+          - name: name
+            label: Your name
+            type: string
+            required: true
+            description: Shown at the top of every page.
+          - name: tagline
+            label: Line under your name
+            type: string
+            description: Shown on the home page, for example "Artist and Researcher · Ed.D., Harvard University".
+          - name: email
+            label: Your email address
+            type: string
+            description: Shown on the Contact page.
+          - name: instagram
+            label: Instagram address
+            type: string
+          - name: linkedin
+            label: LinkedIn address
+            type: string
+          - name: copyright
+            label: Copyright line
+            type: string
+            description: Shown at the bottom of every page.
+
+      # ---------- Home page ----------
+      - name: home
+        label: Home page
+        type: object
+        fields:
+          - name: opening
+            label: Opening artwork
+            type: object
+            fields:
+              - name: show
+                label: Show the opening artwork
+                type: boolean
+              - name: image
+                label: Image
+                type: image
+                options:
+                  media: images
+                description: The large picture on the home page. It isn't repeated on the Studio page.
+              - name: image_small
+                label: Phone-size copy of the image (optional)
+                type: image
+                options:
+                  media: images
+                description: 800 pixels on the long side. Leave empty if you don't have one.
+              - name: width
+                label: Image width in pixels
+                type: number
+                description: Stops the page jumping while it loads. Danny fills this in; leave empty for a new image.
+              - name: height
+                label: Image height in pixels
+                type: number
+                description: Danny fills this in; leave empty for a new image.
+              - name: alt
+                label: Description for blind visitors
+                type: text
+                description: One or two sentences saying what the picture shows. Read aloud by screen readers.
+              - name: title
+                label: Artwork title
+                type: string
+                description: Shown in italics under the picture.
+              - name: detail
+                label: After the title
+                type: string
+                description: For example "ongoing" or "2010".
+          - name: statement
+            label: Statement (the italic paragraph)
+            type: object
+            fields:
+              - name: show
+                label: Show the statement
+                type: boolean
+              - name: text
+                label: Statement
+                type: text
+                description: Your first-person statement, shown large in italics. About 60 words.
+          - name: book
+            label: Book on the home page
+            type: object
+            fields:
+              - name: show
+                label: Show your first book on the home page
+                type: boolean
+                description: Shows the first book from the Books page, with its buy button.
+              - name: heading
+                label: Heading
+                type: string
+                description: For example "New book".
+
+      # ---------- About page ----------
+      - name: about
+        label: About page
+        type: object
+        fields:
+          - name: show
+            label: Show this page in the menu
+            type: boolean
+          - name: heading
+            label: Page title
+            type: string
+            description: Also the word in the menu.
+          - name: paragraphs
+            label: Short bio
+            type: text
+            list: true
+            description: One box per paragraph. About 280 words in all.
+          - name: links
+            label: Linked words
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{text}"
+            description: Words in the bio that should become links.
+            fields:
+              - name: text
+                label: Words (exactly as they appear in the bio)
+                type: string
+              - name: url
+                label: Web address
+                type: string
+                description: Leave empty to show the words without a link.
+          - name: italics
+            label: Words in italics
+            type: string
+            list: true
+            description: Book titles and other words to show in italics, written exactly as in the bio.
+          - name: portrait
+            label: Portrait
+            type: object
+            fields:
+              - name: show
+                label: Show your portrait
+                type: boolean
+              - name: image
+                label: Portrait photo
+                type: image
+                options:
+                  media: images
+              - name: width
+                label: Photo width in pixels
+                type: number
+                description: Optional. Stops the page jumping while it loads.
+              - name: height
+                label: Photo height in pixels
+                type: number
+                description: Optional.
+              - name: alt
+                label: Description for blind visitors
+                type: text
+                description: For example "Krina Patel in her studio at Fort Point Open Studios".
+              - name: caption
+                label: Photo credit or caption
+                type: string
+                description: Optional. Shown small under the photo.
+          - name: cv
+            label: CV download
+            type: object
+            fields:
+              - name: show
+                label: Show the CV button
+                type: boolean
+              - name: label
+                label: Button text
+                type: string
+              - name: file
+                label: CV (PDF file)
+                type: file
+                options:
+                  media: images
+                  extensions: [pdf]
+
+      # ---------- Projects (shown on the About page, under the bio) ----------
+      - name: projects
+        label: Projects (About page)
+        type: object
+        fields:
+          - name: show
+            label: Show projects
+            type: boolean
+          - name: heading
+            label: Heading
+            type: string
+          - name: items
+            label: Projects
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}, {detail}"
+            description: Oldest first, so the tiles tell the story of your work. Drag to change the order.
+            fields:
+              - name: title
+                label: Project name
+                type: string
+              - name: detail
+                label: Place and year
+                type: string
+                description: For example "Boston, 2025".
+              - name: italic_title
+                label: Show the name in italics (for books)
+                type: boolean
+              - name: link
+                label: Link (optional)
+                type: string
+                description: A web address, or "books.html" for your Books page.
+              - name: image
+                label: Image
+                type: image
+                options:
+                  media: images
+                description: Shown in a square frame above the caption.
+              - name: width
+                label: Image width in pixels
+                type: number
+                description: Danny fills this in; leave empty for a new image.
+              - name: height
+                label: Image height in pixels
+                type: number
+                description: Danny fills this in; leave empty for a new image.
+              - name: alt
+                label: Description for blind visitors
+                type: text
+
+      # ---------- Studio page ----------
+      - name: studio
+        label: Studio page
+        type: object
+        fields:
+          - name: show
+            label: Show this page in the menu
+            type: boolean
+          - name: heading
+            label: Page title
+            type: string
+            description: Also the word in the menu.
+          - name: paragraphs
+            label: Studio statement
+            type: text
+            list: true
+            description: One box per paragraph.
+          - name: artworks
+            label: Artworks
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}, {year}"
+            description: Drag to change the order. The home page's opening artwork is left out here so it isn't shown twice.
+            fields:
+              - name: title
+                label: Title
+                type: string
+                description: Shown in italics.
+              - name: year
+                label: Year
+                type: string
+              - name: medium
+                label: Medium
+                type: string
+                description: For example "Etching with chine-collé".
+              - name: size
+                label: Size
+                type: string
+                description: For example "15 × 12 in". Leave empty if it doesn't apply.
+              - name: image
+                label: Image
+                type: image
+                options:
+                  media: images
+                description: About 1600 pixels on the long side (see the README for how to shrink a photo).
+              - name: image_small
+                label: Phone-size copy (optional)
+                type: image
+                options:
+                  media: images
+                description: 800 pixels on the long side. Leave empty if you don't have one.
+              - name: width
+                label: Image width in pixels
+                type: number
+                description: Danny fills this in; leave empty for a new image.
+              - name: height
+                label: Image height in pixels
+                type: number
+                description: Danny fills this in; leave empty for a new image.
+              - name: alt
+                label: Description for blind visitors
+                type: text
+                description: One or two sentences saying what the artwork looks like.
+
+      # ---------- Research page ----------
+      - name: research
+        label: Research page
+        type: object
+        fields:
+          - name: show
+            label: Show this page in the menu
+            type: boolean
+          - name: heading
+            label: Page title
+            type: string
+            description: Also the word in the menu.
+          - name: title
+            label: Project title
+            type: string
+            description: Shown in italics above the essay.
+          - name: paragraphs
+            label: Essay
+            type: text
+            list: true
+            description: One box per paragraph.
+          - name: italics
+            label: Words in italics
+            type: string
+            list: true
+            description: Titles to show in italics, written exactly as in the essay or the note.
+          - name: note
+            label: Note at the end
+            type: text
+            description: Shown in small type after the essay.
+          - name: note_quote
+            label: Quoted passage in the note
+            type: text
+            description: Shown indented under the note.
+
+      # ---------- Books page ----------
+      - name: books
+        label: Books page
+        type: object
+        fields:
+          - name: show
+            label: Show this page in the menu
+            type: boolean
+          - name: heading
+            label: Page title
+            type: string
+            description: Also the word in the menu.
+          - name: show_india_links
+            label: Show India book links
+            type: boolean
+            description: Turns on the "Buy in India" buttons under each book.
+          - name: items
+            label: Books
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{title}"
+            description: The first book here is the one shown on the home page.
+            fields:
+              - name: title
+                label: Title
+                type: string
+                description: Shown in italics.
+              - name: subtitle
+                label: Subtitle
+                type: string
+              - name: description
+                label: One or two lines about the book
+                type: text
+              - name: cover
+                label: Cover image
+                type: image
+                options:
+                  media: images
+                description: Leave empty to show a plain coloured cover with the title.
+              - name: cover_width
+                label: Cover width in pixels
+                type: number
+                description: Optional.
+              - name: cover_height
+                label: Cover height in pixels
+                type: number
+                description: Optional.
+              - name: cover_alt
+                label: Cover description for blind visitors
+                type: string
+              - name: links
+                label: Buy links
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
+                fields:
+                  - name: label
+                    label: Button text
+                    type: string
+                    description: For example "Buy on Amazon".
+                  - name: url
+                    label: Web address
+                    type: string
+              - name: india_links
+                label: India buy links
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{label}"
+                description: Shown only when "Show India book links" is ticked.
+                fields:
+                  - name: label
+                    label: Button text
+                    type: string
+                    description: For example "Buy in India".
+                  - name: url
+                    label: Web address
+                    type: string
+          - name: events
+            label: Upcoming events (book tour)
+            type: object
+            fields:
+              - name: show
+                label: Show tour dates
+                type: boolean
+              - name: heading
+                label: Heading
+                type: string
+              - name: items
+                label: Events
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{date} {city}"
+                fields:
+                  - name: date
+                    label: Date
+                    type: string
+                    description: Written the way you want it shown, for example "14 November 2026".
+                  - name: city
+                    label: City
+                    type: string
+                  - name: venue
+                    label: Venue
+                    type: string
+                  - name: url
+                    label: Link (optional)
+                    type: string
+                  - name: link_label
+                    label: Link text
+                    type: string
+                    description: For example "Details" or "Tickets".
+          - name: panels
+            label: Panels and conversations
+            type: object
+            fields:
+              - name: show
+                label: Show panels and conversations
+                type: boolean
+              - name: heading
+                label: Heading
+                type: string
+              - name: items
+                label: Panels
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{title}"
+                fields:
+                  - name: title
+                    label: Panel or event name
+                    type: string
+                  - name: with
+                    label: Speaking with
+                    type: string
+                    description: For example "Nilima Sheikh".
+                  - name: date
+                    label: Date
+                    type: string
+                  - name: place
+                    label: Place
+                    type: string
+                  - name: url
+                    label: Link (optional)
+                    type: string
+          - name: press
+            label: Press and quotes
+            type: object
+            fields:
+              - name: show
+                label: Show press quotes
+                type: boolean
+              - name: heading
+                label: Heading
+                type: string
+              - name: items
+                label: Quotes
+                type: object
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{source}"
+                fields:
+                  - name: quote
+                    label: Quote
+                    type: text
+                  - name: source
+                    label: Who said it
+                    type: string
+                    description: For example "The Hindu".
+                  - name: url
+                    label: Link to the article (optional)
+                    type: string
+
+      # ---------- Contact page ----------
+      - name: contact
+        label: Contact page
+        type: object
+        fields:
+          - name: show
+            label: Show this page in the menu
+            type: boolean
+          - name: heading
+            label: Page title
+            type: string
+            description: Also the word in the menu.
+          - name: talks
+            label: Talks and workshops
+            type: object
+            fields:
+              - name: show
+                label: Show the line about talks and workshops
+                type: boolean
+              - name: text
+                label: Line about talks and workshops
+                type: text
+                description: Shown above the contact form.
+          - name: form_key
+            label: Contact form key (Web3Forms)
+            type: string
+            description: Danny sets this up. Leave it as it is.
+          - name: newsletter
+            label: Newsletter
+            type: object
+            fields:
+              - name: show
+                label: Show the newsletter link
+                type: boolean
+              - name: text
+                label: Line about the newsletter
+                type: text
+              - name: label
+                label: Button text
+                type: string
+              - name: url
+                label: Sign-up address
+                type: string

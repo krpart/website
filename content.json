@@ -140,7 +140,7 @@
         "title": "An Artwork a Day",
         "subtitle": "The Arts in Health and Wellbeing",
         "description": "Small daily acts of sensory attention and creative expression are essential to health and wellbeing.",
-        "cover": "/images/Screenshot 2026-10-11 at 4.07.31 PM.png",
+        "cover": "images/an-artwork-a-day-cover.png",
         "cover_alt": "Cover of An Artwork a Day",
         "links": [
           {
@@ -153,7 +153,7 @@
       {
         "title": "Memories are Stories",
         "description": "A journal.",
-        "cover": "/images/Screenshot 2026-10-11 at 4.08.04 PM.png",
+        "cover": "images/memories-are-stories-cover.png",
         "cover_alt": "Cover of the Memories are Stories journal",
         "links": [
           {
